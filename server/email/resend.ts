@@ -19,7 +19,7 @@ export async function sendVerificationEmail(
   try {
     const { data, error }: { data: unknown; error: Error | null } =
       await resend.emails.send({
-        from: "onboarding@resend.dev",
+        from: "Acme <onboarding@resend.dev>",
         to: recipient,
         subject: "Verify your email",
         html: verificationEmailTemplate.replace(

@@ -8,7 +8,7 @@ import authRoutes from "./routes/route";
 dotenv.config();
 
 const app: Express = express();
-const PORT: number = Number(process.env.PORT) || 5000;
+export const PORT: number = Number(process.env.PORT) || 5000;
 
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 

@@ -12,8 +12,12 @@ import {
 
 const router: Router = express.Router();
 
-router.get("/", (_: Request, res: Response) => {
-  res.json({success: true, message: "Server is working..."});
+router.get("/health", (_: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    isRunning: true,
+    message: "Server is working fine...",
+  });
 });
 router.get("/check-auth", verifyToken, checkAuth);
 
